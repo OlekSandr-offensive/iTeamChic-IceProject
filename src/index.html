@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>IceCream</title>
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="../images/logo/favicon_32x32.png"
+    />
   </head>
   <body>
     <header>
@@ -24,8 +30,9 @@
     <footer>
       <include src="./partials/footer.html"></include>
     </footer>
-
-  <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./app/menu.js"></script>
+    <script src="./app/modal.js"></script>
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
 </html>
