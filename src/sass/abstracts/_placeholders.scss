@@ -54,6 +54,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -97,14 +98,21 @@
 %btn-2:hover,
 %btn-4:hover,
 %btn-5:hover,
-%btn-6:hover {
+%btn-6:hover,
+%btn-1:focus,
+%btn-2:focus,
+%btn-4:focus,
+%btn-5:focus,
+%btn-6:focus {
   background-color: get-elementColor('button-secondary');
   color: get-elementColor('button-primary');
   fill: get-elementColor('button-primary');
 }
 
 %btn-3:hover,
-%btn-7:hover {
+%btn-7:hover,
+%btn-3:focus,
+%btn-7:focus {
   background-color: get-elementColor('button-primary');
   color: get-elementColor('button-secondary');
 }

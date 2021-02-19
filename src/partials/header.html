@@ -18,7 +18,7 @@
     <div class="header__buttons">
       <button
         type="button mobile-nav"
-        class="mobile-nav__button"
+        class="mobile-nav__btn"
         aria-expanded="false"
         aria-controls="menu-container"
         data-menu-button
@@ -48,13 +48,21 @@
       </button>
     </div>
 
-    <div class="mobile-nav" data-menu>
-      <ul>
-        <li>Home</li>
-        <li>About us</li>
-        <li>How it’s made?</li>
-        <li>Our products</li>
-        <li>Contact</li>
+    <div class="site-nav--mobile" data-menu>
+
+      <button class="header__btn--mobile btn-1">
+        Buy now
+        <svg class="btn-icon" width="6" height="10">
+          <use href="../images/svg/symbol-defs.svg#icon-further"></use>
+        </svg>
+      </button>
+
+      <ul class="site-nav__list--mobile">
+      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile site-nav__link--current" href="./index.html">Home</a></li>
+      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href=>About us</a></li>
+      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">How it’s made?</a></li>
+      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">Our products</a></li>
+      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">Contact</a></li>
       </ul>
     </div>
   </nav>
