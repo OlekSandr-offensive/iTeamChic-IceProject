@@ -114,10 +114,20 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: get-textColor('accent-bright');
+
+  @media screen and (min-width: 768px) {
+    margin-top: 36px;
+    font-size: getFont-size__tab('title-section');
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 40px;
+    font-size: getFont-size__desk('title-section');
+  }
 }
 .advantages__text {
   width: 230px;
-  margin-top: 13px;
+  margin-top: 14px;
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
@@ -125,7 +135,16 @@
   line-height: 1.67;
   color: get-textColor('main-dark');
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) {
+    font-size: getFont-size__tab('text-client');
+    line-height: 1.71;
     width: 180px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: getFont-size__desk('text-more');
+    letter-spacing: 0.02em;
+    line-height: 1.75;
+    width: 330px;
   }
 }
