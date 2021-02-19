@@ -34,13 +34,14 @@ $font-size__tab: (
 $font-size__mob: (
   'header-title': 26px,
   'text': 12px,
+  'text2': 14px,
   'card-title': 28px,
   'title-section': 34px,
   'subtitle': 20px,
   'number': 36px,
   'label-title': 18px,
   'button-anchor': 8px,
-  'nav-tablet': 14px,
+  'nav-mob': 14px,
 );
 
 @function getFont-size__mob($key) {
