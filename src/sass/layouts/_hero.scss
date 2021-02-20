@@ -13,7 +13,20 @@
     height: 665px;}
 }
 
-// 
+
+.hero__container{
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding-top: 94px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-top: 156px;
+    }
+  
+}
+
 .hero__img{
     position: absolute;
     left: 117px;
@@ -79,14 +92,14 @@ margin-bottom: 20px;
 
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-top: 102px;
+    padding-top: 15px;
     font-size: getFont-size__tab('header-title');
     width: 162px;
     height: 80px;
 }
 
 @media screen and (min-width: 1280px){
-    padding-top: 171px;
+    padding-top: 0;
     font-size: getFont-size__desk('header-title');
     width: 277px;
     height: 137px;
@@ -197,17 +210,35 @@ top: 52px;
 
 .hero__list_number{
     display: none;
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px){
     display: block;
-    text-align: right;
-    
+    position: relative;
+    }
+}
+
+.hero__item_number:first-child{
+    @media screen and (min-width: 768px){
+         margin-bottom: 13px;}
+    @media screen and (min-width: 1280px){
+        margin-bottom: 15px;}
+}
+
+.hero__round_cafes,
+.hero__round_food{
+    @media screen and (min-width: 768px){
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        left: 50%;
+        background-color: get-bgColor('main');
+        z-index: -1;
     }
 
- @media screen and (min-width: 1280px){
-     display:block;
-     text-align: right; 
-     
- }
+    @media screen and (min-width: 1280px){
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
