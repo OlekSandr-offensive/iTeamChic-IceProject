@@ -1,0 +1,39 @@
+<div class="backdrop backdrop--hidden" data-modal>
+  <div class="modal">
+    <button class="modal__btn-close" type="button" data-modal-close>
+      <svg class="icon" width="15" height="15">
+        <use href="../images/svg/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="form__buy-now">
+      <h2 class="form__title">Buy now</h2>
+      <form class="form__modal">
+        <label for="user-name" class="input__container">
+          <span class="input__label">Name</span>
+          <input class="input__field" type="text" name="user-name" />
+          <svg class="input__icon" width="10" height="10">
+            <use href=""></use>
+          </svg>
+        </label>
+        <label for="phone-number" class="input__container">
+          <span class="input__label">Telephone number</span>
+          <input class="input__field" type="tel" name="phone-number" />
+          <svg class="input__icon" width="10" height="10">
+            <use href=""></use>
+          </svg>
+        </label>
+        <label for="comment" class="comment__container">
+          <span class="input__label">Leave a comment</span>
+          <textarea
+            class="input__field input__comment"
+            name="comment"
+            placeholder="Type the comment"
+          ></textarea>
+        </label>
+      </form>
+      <div class="confirmation">
+        <button class="button__confirmation" type="submit">Place order</button>
+      </div>
+    </div>
+  </div>
+</div>
