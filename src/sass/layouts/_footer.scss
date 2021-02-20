@@ -1,0 +1,52 @@
+footer {
+  background-color: get-bgColor('accent-pale');
+}
+
+.footer__slohan-tittle {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Titan One';
+  font-size: getFont-size__mob('text');
+  font-weight: 400;
+  line-height: 21px;
+  color: get-titleColor('accent-pale');
+}
+
+.footer__saturated {
+  font-size: 34px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  color: get-titleColor('accent-bright');
+}
+
+.conection-svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.conection-link {
+  color: get-titleColor('accent-pale');
+}
+
+.conection-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: getFont-size__mob('text');
+  line-height: 186%;
+  color: get-titleColor('main-dark');
+}
+
+.conection-tel {
+  color: get-textColor('accent-bright');
+}
+
+.footer-titre {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: getFont-size__mob('nav-tablet');
+  line-height: 152%;
+  color: get-titleColor('additional');
+}

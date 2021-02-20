@@ -1,0 +1,75 @@
+.schedule-works {
+  min-width: 220px;
+  min-height: 427px;
+  border: 1px solid tomato;
+  border-radius: 24px;
+  padding: 43px 21px 43px 20px;
+}
+
+.works-cafe {
+  //   margin-bottom: 50px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.cafe-rubric {
+  width: 80px;
+  height: 16px;
+  background: get-elementColor('card-secondary');
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.cafe-rubric-green {
+  width: 130px;
+  height: 16px;
+  background: get-elementColor('card-tertiary');
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.rubric-text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: getFont-size__mob('text');
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: get-textColor('main-light');
+}
+
+.cafe-town {
+  margin-bottom: 10px;
+}
+
+.cafe-story {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: get-titleColor('additional');
+}
+
+.cafe-link {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: getFont-size__mob('text');
+  line-height: 18px;
+}
+
+.cafe-day {
+  margin-bottom: 10px;
+}
+
+.timetable-cafe {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
