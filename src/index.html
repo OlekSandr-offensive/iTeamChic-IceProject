@@ -10,7 +10,7 @@
       sizes="32x32"
       rel="icon"
       href="../images/logo/favicon_32x32.png"
-/>
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
@@ -34,13 +34,17 @@
       <include src="./partials/gallery.html"></include>
       <include src="./partials/reviews.html"></include>
       <include src="./partials/contacts.html"></include>
+      <include src="./partials/modal.html"></include>
     </main>
 
     <footer>
       <include src="./partials/footer.html"></include>
     </footer>
 
-
+    <!-- Скрипт для модального окна кнопки Buy now -->
+    <script src="./js/modal-buy-now.js"></script>
+    <!-- Скрипт для мобильного меню -->
+    <script src="./js/menu.js"></script>
     <!-- Скрипт для модального окна секции About -->
     <script src="./js/modal-read-more.js"></script>
 
@@ -50,8 +54,8 @@
     <!-- Подключает слайдер Slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
     <script src="./js/slider.js"></script>
-    
-  <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
 </html>
