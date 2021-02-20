@@ -187,6 +187,14 @@
 .about__read-more {
   @extend %btn-5;
   outline: none;
+  &:hover .about__btn-icon,
+  &:focus .about__btn-icon {
+    stroke: get-elementColor('button-primary');
+  }
+}
+.about__btn-icon {
+  margin-left: 10px;
+  stroke: get-elementColor('button-secondary');
 }
 ///////////////////////////// Modal window
 .backdrop__readmore {
