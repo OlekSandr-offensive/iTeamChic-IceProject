@@ -45,6 +45,7 @@ header {
   @media screen and (min-width: $tablet) {
     width: 254px;
   }
+  box-sizing: border-box;
 
   position: fixed;
   top: 0;
@@ -71,11 +72,16 @@ header {
 
 .mobile-nav__btn {
   display: inline-flex;
-  // margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
   z-index: 4;
+
+  cursor: pointer;
+  stroke: get-elementColor('button-secondary');
+  transition-property: stroke;
+  transition-duration: $animation-time;
+  transition-timing-function: $animation-timing-function;
 
   @media screen and (min-width: $tablet) {
     margin-right: 30px;
@@ -85,15 +91,31 @@ header {
   }
 }
 
+.mobile-nav__btn.is-open {
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 23px;
+    right: 14px;
+    stroke: get-elementColor('button-primary');
+  }
+}
+
+.mobile-nav__btn.is-open:hover,
+.icon-close:focus {
+  stroke: get-elementColor('button-secondary');
+}
+
 .mobile-nav__btn .icon-close {
   display: none;
 }
 
 .mobile-nav__btn.is-open .icon-close {
   display: block;
-  @media screen and (min-width: $tablet) {
-    transform: translate(150%);
-  }
+}
+
+.mobile-nav__btn:hover,
+.mobile-nav__btn:focus {
+  stroke: get-elementColor('button-primary');
 }
 
 .mobile-nav__btn.is-open .icon-menu {
