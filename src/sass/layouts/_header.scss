@@ -4,6 +4,7 @@ header {
   top: 0;
   left: calc(-50%);
   transform: translateX(50%);
+  z-index: 999;
 }
 
 .header__buttons {
