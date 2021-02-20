@@ -18,9 +18,9 @@
 
     transform: translate(-50%, -50%) scale(1);
 
-    // transition-property: transform;
-    // transition-duration: $animation-time;
-    // transition-timing-function: $animation-timing-function;
+    transition-property: transform;
+    transition-duration: $animation-time;
+    transition-timing-function: $animation-timing-function;
   }
 
   @media screen and(min-width: $desktop) {
@@ -42,15 +42,15 @@
     background-color: transparent;
     // align-items: center;
 
-    // transition-property: border-color;
-    // transition-duration: $animation-time;
-    // transition-timing-function: $animation-timing-function;
+    transition-property: border-color;
+    transition-duration: $animation-time;
+    transition-timing-function: $animation-timing-function;
   }
 
-  // &__btn-close:hover {
-  // border-color: $accent-color;
-  // color: $accent-color;
-  // }
+  &__btn-close:hover {
+    border-color: get-elementColor('button-primary');
+    color: get-elementColor('button-primary');
+  }
 }
 
 .backdrop {
@@ -66,7 +66,7 @@
 
   opacity: 1;
 
-  // transition: opacity $animation-time $animation-timing-function;
+  transition: opacity $animation-time $animation-timing-function;
 }
 
 .backdrop--hidden {
