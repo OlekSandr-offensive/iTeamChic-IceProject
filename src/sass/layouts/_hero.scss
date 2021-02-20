@@ -3,14 +3,17 @@
     position: relative;
     background: get-bgColor('accent-bright');
     height:502px;
-   
+    overflow: hidden;
     z-index: 1;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-    max-height: 399px;}
+    height: 399px;
+    overflow: hidden;}
+
  
     @media screen and (min-width: 1280px){
-    height: 665px;}
+    height: 665px;
+    overflow: hidden;}
 }
 
 
@@ -64,6 +67,33 @@
 
 }
 
+.hero__button_products{
+ @extend %btn-3;
+}
+
+.hero__button_made{
+  @extend %btn-2;
+}
+
+.hero__button_arrow{
+ @extend %btn-4;
+ display: none;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display:block;
+    position: absolute;
+    left: 154px;
+    top: 340px;}
+    @media screen and (min-width: 1280px){
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        left: 295px;
+        top: 583px;
+
+    }
+}
+
 .hero__item_button:first-child{
 margin-right: 8px;
 }
@@ -92,7 +122,7 @@ margin-bottom: 20px;
 
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-top: 15px;
+    padding-top: 0;
     font-size: getFont-size__tab('header-title');
     width: 162px;
     height: 80px;
@@ -180,12 +210,12 @@ font-weight:400;
 font-size: getFont-size__tab('text-header');
 line-height: 1.5;
 color: get-textColor('main-light');
- margin-top: 30px;
+ margin-top: 32px;
  margin-left: 120px;
 }
 
  @media screen and (min-width: 1280px){
-    margin-top: 140px;
+    margin-top: 130px;
     margin-left: 148px;
     font-size: getFont-size__desk('text');
  }
@@ -193,23 +223,6 @@ color: get-textColor('main-light');
 
 }
 
-.btn-4{
-    display: none;
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display:block;
-    position: absolute;
-    left: 154px;
-    top: 340px;}
-    @media screen and (min-width: 1280px){
-        display: block;
-        position: absolute;
-        width: 26px;
-        height: 26px;
-        left: 295px;
-        top: 583px;
-
-    }
-}
 
 
 .hero__list_number{
