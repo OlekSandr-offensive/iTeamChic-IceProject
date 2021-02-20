@@ -5,16 +5,15 @@
   @media screen and (max-width: $max-mobile) {
     min-width: 280px;
     max-width: 440px;
+
     padding-left: 10px;
     padding-right: 10px;
   }
-
   @media screen and (min-width: $tablet) {
     width: 700px;
     padding-left: 10px;
     padding-right: 10px;
   }
-
   @media screen and (min-width: $desktop) {
     width: 1050px;
     padding-left: 15px;
