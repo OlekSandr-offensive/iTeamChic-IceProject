@@ -19,7 +19,8 @@
   font-size: get-font-size__desk('nav');
   line-height: 1.31;
 
-  transition-property: background-color, color;
+
+  transition-property: color background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
