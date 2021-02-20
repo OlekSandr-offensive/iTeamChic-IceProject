@@ -172,20 +172,24 @@ top: 52px;
 
 .hero__text{
     display: none;
-//     @media screen and (min-width: 768px) and (max-width: 1279px) {
-//     display:block;
-//     font-family: DM Sans;
-// font-style: normal;
-// font-weight:400;
-// font-size: getFont-size__tab('text-header');
-// line-height: 1.5;
-// color: get-textColor('main-light');
-// position: absolute;
-// width: 100%;
-// height: 48px;
-// left: 154px;
-// top: 292px;
-// }
+    @media screen and (min-width: 768px)  {
+    display:block;
+    font-family: DM Sans;
+font-style: normal;
+font-weight:400;
+font-size: getFont-size__tab('text-header');
+line-height: 1.5;
+color: get-textColor('main-light');
+ margin-top: 30px;
+ margin-left: 120px;
+}
+
+ @media screen and (min-width: 1280px){
+    margin-top: 140px;
+    margin-left: 148px;
+    font-size: getFont-size__desk('text');
+ }
+
 
 }
 
@@ -260,42 +264,6 @@ color: get-textColor('accent-bright');
  }
 }
 
-
-
-// .hero__text_number-16{
-//      @media screen and (min-width: 768px) and (max-width: 1279px) {
-//     position: absolute;
-//     left: 691px;
-//     top: 96px; 
-//     }
-
-//     @media screen and (min-width: 1280px){
-//         position: absolute;
-//         left: 1111px;
-//         top: 160px;
-
-//     }
-
-// }
-
-// .hero__text_number-23{
-//     @media screen and (min-width: 768px) and (max-width: 1279px) {
-//     position: absolute;
-//     left: 690px;
-//     top: 152px;
-//     }
-
-//     @media screen and (min-width: 1280px){
-//         position: absolute;
-//         left: 1106px;
-//         top: 251px;
-
-
-//     }
-
-// }
-
-
 .hero__text_cafes,
 .hero__text_food{
 font-family: DM Sans;
@@ -311,29 +279,3 @@ color: get-textColor('main-light');
 }
 
 
-// .hero__text_cafes{
-//     @media screen and (min-width: 768px) and (max-width: 1279px) {
-//     position: absolute;
-//     left: 704px;
-//     top: 128px;
-//     }
-//     @media screen and (min-width: 1280px){
-//         position: absolute;
-//         left: 1125px;
-//         top: 215px;
-//     }
-// }
-
-// .hero__text_food{
-//     @media screen and (min-width: 768px) and (max-width: 1279px) {
-//     position: absolute;
-//     left: 683px;
-//     top: 184px;
-//     }
-
-//     @media screen and (min-width: 1280px){
-//         position: absolute;
-//        left: 1080px;
-//        top: 306px;
-//     }
-// }
