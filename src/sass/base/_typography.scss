@@ -5,6 +5,7 @@ $font-size__desk: (
   'card-title label-title': 30px,
   'title-section': 58px,
   'text-client': 20px,
+  'text-review': 20px,
   'button-modal': 16px,
   'button-anchor': 14px,
   'numbers-header': 46px,
@@ -24,6 +25,7 @@ $font-size__tab: (
   'button-anchor': 8px,
   'numbers-header': 28px,
   'text-client': 14px,
+  'text-review': 14px,
   'text-categories': 16px,
 );
 
@@ -34,13 +36,14 @@ $font-size__tab: (
 $font-size__mob: (
   'header-title': 26px,
   'text': 12px,
+  'text2': 14px,
   'card-title': 28px,
   'title-section': 34px,
   'subtitle': 20px,
   'number': 36px,
   'label-title': 18px,
   'button-anchor': 8px,
-  'nav-tablet': 14px,
+  'nav-mob': 14px,
 );
 
 @function getFont-size__mob($key) {
