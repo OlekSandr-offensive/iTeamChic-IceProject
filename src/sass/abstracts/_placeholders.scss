@@ -19,9 +19,8 @@
   font-size: get-font-size__desk('nav');
   line-height: 1.31;
 
-  transition-property: background-color;
-  transition-property: color;
-  transition-duration: 1200ms;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -64,9 +63,7 @@
   fill: get-elementColor('button-secondary');
   cursor: pointer;
 
-  transition-property: background-color;
-  transition-property: color;
-  transition-property: fill;
+  transition-property: background-color, color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

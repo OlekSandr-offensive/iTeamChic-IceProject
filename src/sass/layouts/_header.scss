@@ -1,5 +1,9 @@
-.header__container {
-  background-color: get-bgColor('accent-bright');
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: calc(-50%);
+  transform: translateX(50%);
 }
 
 .header__buttons {
@@ -22,13 +26,14 @@
 }
 
 .main-nav {
-  // @media screen and (max-width: $tablet) {
-  // width: 100%;
-  // }
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
+  min-height: 56px;
+  @media screen and (min-width: $tablet) {
+    min-height: 87px;
+  }
 }
 
 .site-nav--mobile {
@@ -36,21 +41,24 @@
     display: none;
   }
 
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  position: fixed;
+  @media screen and (min-width: $tablet) {
+    width: 254px;
+  }
+
+  position: absolute;
   top: 0;
   right: 0;
-  width: 209px;
+  width: 250px;
   height: 100%;
   padding: 60px 20px;
   z-index: 3;
 
   opacity: 0;
   background-color: #e17992;
+
   visibility: hidden;
   pointer-events: none;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
 }
 
 .site-nav--mobile.is-open {
@@ -82,17 +90,17 @@
 
 .mobile-nav__btn.is-open .icon-close {
   display: block;
+  @media screen and (min-width: $tablet) {
+    transform: translate(150%);
+  }
 }
 
 .mobile-nav__btn.is-open .icon-menu {
   display: none;
 }
 
-.mobile-nav__list {
-  text-align: center;
-}
-
 .header__btn {
+  @extend %btn-1;
   display: none;
   @media screen and (min-width: $tablet) {
     display: block;
@@ -100,10 +108,12 @@
 }
 
 .header__btn--mobile {
+  @extend %btn-1;
   width: 209px;
-  // margin-left: auto;
-  // margin-right: auto;
   margin-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
 }
 
 .site-nav {
@@ -144,34 +154,4 @@
 
 .site-nav__link--mobile {
   font-size: get-font-size__tab('nav');
-}
-
-// Buttons
-
-.btn-1 {
-  @extend %btn-1;
-}
-
-.btn-2 {
-  @extend %btn-2;
-}
-
-.btn-3 {
-  @extend %btn-3;
-}
-
-.btn-4 {
-  @extend %btn-4;
-}
-
-.btn-5 {
-  @extend %btn-5;
-}
-
-.btn-6 {
-  @extend %btn-6;
-}
-
-.btn-7 {
-  @extend %btn-7;
 }
