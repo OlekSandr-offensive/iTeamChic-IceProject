@@ -69,10 +69,22 @@
 
 .hero__button_products{
  @extend %btn-3;
+ @media screen  and (max-width: 1279px) {
+ font-size: getFont-size__tab('button-anchor');
+ width: 62.4px;
+ height: 24px;
+
+ 
+ }
 }
 
 .hero__button_made{
   @extend %btn-2;
+  @media screen  and (max-width: 1279px) {
+ font-size: getFont-size__tab('button-anchor');
+ width: 82.8px;
+height: 24px;
+ }
 }
 
 .hero__button_arrow{
