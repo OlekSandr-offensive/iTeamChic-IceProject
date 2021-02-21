@@ -1,13 +1,40 @@
-.schedule-works {
-  min-width: 220px;
-  min-height: 427px;
-  border: 1px solid tomato;
-  border-radius: 24px;
-  padding: 43px 21px 43px 20px;
+.contacts {
+  background-color: get-bgColor('accent-pale');
 }
 
-.works-cafe {
-  //   margin-bottom: 50px;
+.schedule-hookup {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin: -15px;
+  }
+}
+
+.hookup-item {
+  height: auto;
+  text-align: inherit;
+  background-color: get-bgColor('main');
+  border-radius: 24px;
+  padding: 43px 21px 43px 20px;
+  @media screen and (max-width: $max-mobile) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 2 * 20px) / 3);
+    margin: 10px;
+    padding: 50px 32px 50px 31px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    padding: 51px 44px 62px 43px;
+    margin: 15px;
+  }
+}
+
+.works-cafe__item:not(:last-child) {
   border-bottom: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
@@ -17,7 +44,9 @@
 
 .cafe-rubric {
   width: 80px;
-  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: get-elementColor('card-secondary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -25,7 +54,9 @@
 
 .cafe-rubric-green {
   width: 130px;
-  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: get-elementColor('card-tertiary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -39,10 +70,26 @@
   line-height: 186%;
   letter-spacing: 0.04em;
   color: get-textColor('main-light');
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__tab('text-categories');
+  }
 }
 
 .cafe-town {
   margin-bottom: 10px;
+  font-family: 'DM Sans';
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  font-size: getFont-size__mob('text');
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__desk('text-more');
+  }
 }
 
 .cafe-story {
@@ -51,7 +98,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: get-titleColor('additional');
+  letter-spacing: 0.04em;
+  color: get-textColor('additional');
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__desk('text-more');
+  }
 }
 
 .cafe-link {
@@ -60,16 +114,81 @@
   font-weight: 500;
   font-size: getFont-size__mob('text');
   line-height: 18px;
+  color: get-textColor('additional');
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__desk('text-more');
+  }
 }
 
 .cafe-day {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__desk('text-more');
+  }
 }
 
-.timetable-cafe {
-  border-bottom: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ececec;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
+.cafe-time {
+  color: get-textColor('accent-bright');
+}
+
+.button-contact {
+  margin-right: 15px;
+  width: 161px;
+  height: 44px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: getFont-size__desk('text-more');
+  line-height: 21px;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  border-style: none;
+  border-radius: 22px;
+  color: get-textColor('main-light');
+  background-color: get-elementColor('button-secondary');
+}
+
+.button-wight {
+  margin-top: 10px;
+  color: get-textColor('accent-bright');
+  background-color: get-elementColor('button-primary');
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+}
+
+.schedule-button {
+  margin-top: 54px;
+  padding-bottom: 113px;
+  align-items: center;
+  @media screen and (max-width: $max-mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    margin-top: 81px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
 }
