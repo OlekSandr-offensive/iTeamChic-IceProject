@@ -136,4 +136,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+  @media screen and (min-width: $tablet) {
+    padding-top: 29px;
+    padding-bottom: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
 }
