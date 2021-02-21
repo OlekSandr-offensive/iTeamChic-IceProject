@@ -115,6 +115,7 @@
   background: url('../../images/svg/icon_top.png') no-repeat;
 }
 
-.scrollup:hover {
+.scrollup:hover,
+.scrollup:focus {
   transform: scale(1.25);
 }
