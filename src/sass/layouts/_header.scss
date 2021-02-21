@@ -42,9 +42,6 @@ header {
     display: none;
   }
 
-  @media screen and (min-width: $tablet) {
-    width: 254px;
-  }
   box-sizing: border-box;
 
   position: fixed;
@@ -92,12 +89,10 @@ header {
 }
 
 .mobile-nav__btn.is-open {
-  @media screen and (min-width: $tablet) {
-    position: absolute;
-    top: 23px;
-    right: 14px;
-    stroke: get-elementColor('button-primary');
-  }
+  position: absolute;
+  top: 23px;
+  right: 14px;
+  stroke: get-elementColor('button-primary');
 }
 
 .mobile-nav__btn.is-open:hover,
@@ -134,9 +129,6 @@ header {
   @extend %btn-1;
   width: 209px;
   margin-bottom: 32px;
-  @media screen and (min-width: $tablet) {
-    width: 186px;
-  }
 }
 
 .site-nav {
