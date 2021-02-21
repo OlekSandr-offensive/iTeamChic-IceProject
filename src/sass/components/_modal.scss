@@ -108,7 +108,10 @@
   opacity: 0.3;
   position: fixed;
   bottom: 50px;
-  right: 100px;
+  @media screen and (min-width: $tablet) {
+    right: 100px;
+  }
+  right: 10px;
   display: none;
   color: transparent;
   background: url('../../images/svg/icon_top.png') no-repeat;
