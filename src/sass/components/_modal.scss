@@ -98,6 +98,27 @@
 }
 
 .button__confirmation {
-  width: 50%;
-  transform: translate(50%);
+  @extend %btn-1;
+  // width: 50%;
+  // transform: translate(50%);
+}
+
+.scrollup {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  color: transparent;
+  background: url('../../images/svg/icon_top.png') no-repeat;
+  transition-property: transform;
+  transition-duration: $animation-time;
+  transition-timing-function: $animation-timing-function;
+}
+
+.scrollup:hover,
+.scrollup:focus {
+  transform: scale(1.25);
 }
