@@ -1,4 +1,4 @@
-$('.reviews__list').slick({
+$('.reviews__slider').slick({
     dots: true,
   infinite: false,
   speed: 500,
