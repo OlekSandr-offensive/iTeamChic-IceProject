@@ -98,6 +98,7 @@
 }
 
 .button__confirmation {
-  width: 50%;
-  transform: translate(50%);
+  @extend %btn-1;
+  // width: 50%;
+  // transform: translate(50%);
 }
