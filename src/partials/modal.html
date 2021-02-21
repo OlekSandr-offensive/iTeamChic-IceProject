@@ -1,23 +1,23 @@
 <div class="backdrop backdrop--hidden" data-modal>
-  <div class="modal">
-    <button class="modal__btn-close" type="button" data-modal-close>
-      <svg class="icon" width="15" height="15">
-        <use href="../images/svg/symbol-defs.svg#icon-close"></use>
+  <div class="modal__readmore">
+    <button class="readmore__close-button" type="button" data-modal-close>
+      <svg height="20" width="20">
+        <use href="../images/svg/symbol-defs.svg#icon-close-cross"></use>
       </svg>
     </button>
     <div class="form__buy-now">
-      <h2 class="form__title">Buy now</h2>
-      <form class="form__modal">
+      <h2 class="readmore__title">Buy now</h2>
+      <form action="../php/telegram.php" method="POST" class="form__modal">
         <label for="user-name" class="input__container">
-          <span class="input__label">Name</span>
-          <input class="input__field" type="text" name="user-name" />
+          <span class="readmore__text1">Name</span>
+          <input class="readmore__text2" type="text" name="user-name" />
           <svg class="input__icon" width="10" height="10">
             <use href=""></use>
           </svg>
         </label>
         <label for="phone-number" class="input__container">
           <span class="input__label">Telephone number</span>
-          <input class="input__field" type="tel" name="phone-number" />
+          <input class="input__field" type="tel" name="user_phone" />
           <svg class="input__icon" width="10" height="10">
             <use href=""></use>
           </svg>
@@ -26,14 +26,18 @@
           <span class="input__label">Leave a comment</span>
           <textarea
             class="input__field input__comment"
-            name="comment"
+            name="user_comment"
             placeholder="Type the comment"
           ></textarea>
         </label>
+        <div class="confirmation">
+          <button class="button__confirmation" type="submit">
+            Place order
+          </button>
+        </div>
       </form>
-      <div class="confirmation">
-        <button class="button__confirmation" type="submit">Place order</button>
-      </div>
     </div>
   </div>
 </div>
+<!-- Кнопка прокрутки наверх -->
+<a href="#" class="scrollup">Наверх</a>
