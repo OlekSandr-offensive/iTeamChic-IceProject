@@ -2,6 +2,7 @@ footer {
   background-color: get-bgColor('accent-pale');
 }
 
+
 .footer__border {
   border-bottom: 1px solid #ececec;
 }
@@ -11,16 +12,19 @@ footer {
   flex-direction: column;
   @media screen and (min-width: $tablet) {
     flex-direction: row;
+
     justify-content: space-between;
   }
 }
 
 .footer-slohan {
+
   @media screen and (max-width: 479px) {
     width: 234px;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     width: 340px;
+
   }
 }
 
@@ -33,6 +37,7 @@ footer {
   margin-bottom: 17px;
   letter-spacing: normal;
   @media screen and (min-width: $tablet) {
+
     margin-bottom: 16px;
     font-size: 26px;
     line-height: 1.15;
@@ -45,11 +50,13 @@ footer {
 }
 
 .footer__saturated {
+
   font-family: 'Titan One';
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: 0.04em;
   color: get-titleColor('accent-bright');
+
   margin-bottom: 43px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 90px;
@@ -61,6 +68,7 @@ footer {
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
+
   }
 }
 
@@ -83,6 +91,7 @@ footer {
   justify-content: center;
   width: 32px;
   height: 32px;
+
   border-radius: 50%;
   padding: 0;
   border: none;
@@ -96,6 +105,7 @@ footer {
     background-color: #d41443;
     outline: none;
   }
+
 }
 
 .conection-text {
@@ -110,11 +120,13 @@ footer {
   color: get-titleColor('main-dark');
   @media screen and (min-width: $tablet) {
     font-size: 14px;
+
     line-height: 1.86;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 1.88;
+
     letter-spacing: 0.02em;
   }
 }
@@ -126,6 +138,7 @@ footer {
 .footer-titre {
   padding-top: 22px;
   padding-bottom: 25px;
+
   text-align: center;
   font-family: 'DM Sans';
   font-style: normal;
@@ -133,6 +146,7 @@ footer {
   font-size: getFont-size__mob('nav-tablet');
   line-height: 1.5;
   color: get-textColor('additional');
+
   @media screen and (max-width: 479px) {
     width: 150px;
     margin-left: auto;
@@ -145,6 +159,7 @@ footer {
   @media screen and (min-width: $desktop) {
     padding-top: 9px;
     padding-bottom: 10px;
+
   }
 }
 

@@ -14,6 +14,7 @@
   text-align: inherit;
   background-color: get-bgColor('main');
   border-radius: 24px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   padding: 43px 21px 43px 20px;
   @media screen and (max-width: $max-mobile) {
     &:not(:last-child) {
@@ -140,6 +141,7 @@
 }
 
 .button-location {
+
   @extend %btn-7;
   margin-bottom: 10px;
   width: 161px;
@@ -149,6 +151,7 @@
     width: 191.45px;
     margin-bottom: 0;
     margin-right: 15px;
+
   }
   @media screen and (min-width: $desktop) {
     width: 198px;
@@ -156,11 +159,16 @@
 }
 
 .button-franchise {
+
   @extend %btn-6;
   width: 161px;
   height: 44px;
   @media screen and (min-width: $tablet) {
     width: 174.05px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
+
   }
   @media screen and (min-width: $desktop) {
     width: 180px;
@@ -179,6 +187,7 @@
     display: flex;
     justify-content: center;
     margin-top: 81px;
+    padding-bottom: 165px;
   }
 }
 
