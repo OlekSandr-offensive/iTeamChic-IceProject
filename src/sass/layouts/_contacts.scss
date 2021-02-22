@@ -6,7 +6,57 @@
   clip: rect(0 0 0 0);
 }
 .contacts {
-  background-color: get-bgColor('accent-pale');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: linear-gradient(
+    to bottom,
+    get-bgColor('main') 5.3%,
+    get-bgColor('accent-pale') 5.3%,
+    get-bgColor('accent-pale')
+  );
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      get-bgColor('main') 9.35%,
+      get-bgColor('accent-pale') 9.35%,
+      get-bgColor('accent-pale')
+    );
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../../images/contacts/optimisized__png/bg__desktop.png),
+      linear-gradient(
+        to bottom,
+        get-bgColor('main') 11.76%,
+        get-bgColor('accent-pale') 11.76%,
+        get-bgColor('accent-pale')
+      );
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/contacts/optimisized__png/bg__desktop@2x.png),
+        linear-gradient(
+          to bottom,
+          get-bgColor('main') 11.76%,
+          get-bgColor('accent-pale') 11.76%,
+          get-bgColor('accent-pale')
+        );
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url(../../images/contacts/optimisized__png/bg__desktop@3x.png),
+        linear-gradient(
+          to bottom,
+          get-bgColor('main') 11.76%,
+          get-bgColor('accent-pale') 11.76%,
+          get-bgColor('accent-pale')
+        );
+    }
+  }
 }
 
 .schedule-works {
@@ -176,7 +226,6 @@
     line-height: 1.81;
   }
 }
-
 
 .schedule-button {
   margin-top: 54px;
