@@ -9,7 +9,7 @@
   background-color: get-bgColor('accent-pale');
 }
 
-.schedule-hookup {
+.schedule-works {
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-right: -10px;
@@ -22,7 +22,7 @@
   }
 }
 
-.hookup-item {
+.works-item {
   height: auto;
   background-color: get-bgColor('main');
   border-radius: 24px;
@@ -176,6 +176,7 @@
     line-height: 1.81;
   }
 }
+
 
 .schedule-button {
   margin-top: 54px;
