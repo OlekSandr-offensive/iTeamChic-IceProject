@@ -2,14 +2,14 @@
   background-color: get-bgColor('accent-pale');
 }
 
-.schedule-hookup {
+.schedule-works {
   @media screen and (min-width: 768px) {
     display: flex;
     margin: -15px;
   }
 }
 
-.hookup-item {
+.works-item {
   height: auto;
   text-align: inherit;
   background-color: get-bgColor('main');
@@ -44,9 +44,7 @@
 
 .cafe-rubric {
   width: 80px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: get-elementColor('card-secondary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -54,9 +52,7 @@
 
 .cafe-rubric-green {
   width: 130px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: get-elementColor('card-tertiary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -97,7 +93,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 150%;
   letter-spacing: 0.04em;
   color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
@@ -113,7 +109,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: getFont-size__mob('text');
-  line-height: 18px;
+  line-height: 150%;
   color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
@@ -140,33 +136,34 @@
 }
 
 .cafe-time {
-  color: get-textColor('accent-bright');
+  color: get-textColor('accent-pale');
 }
 
-.button-contact {
-  margin-right: 15px;
+.button-location {
+  @extend %btn-7;
+  margin-bottom: 10px;
   width: 161px;
   height: 44px;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: getFont-size__desk('text-more');
-  line-height: 21px;
-  display: inline-block;
-  align-items: center;
-  text-align: center;
-  border-style: none;
-  border-radius: 22px;
-  color: get-textColor('main-light');
-  background-color: get-elementColor('button-secondary');
+
+  @media screen and (min-width: $tablet) {
+    width: 191.45px;
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 198px;
+  }
 }
 
-.button-wight {
-  margin-top: 10px;
-  color: get-textColor('accent-bright');
-  background-color: get-elementColor('button-primary');
+.button-franchise {
+  @extend %btn-6;
+  width: 161px;
+  height: 44px;
   @media screen and (min-width: $tablet) {
-    margin-top: 0;
+    width: 174.05px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
   }
 }
 
