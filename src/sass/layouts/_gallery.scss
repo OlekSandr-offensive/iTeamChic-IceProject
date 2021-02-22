@@ -1,0 +1,17 @@
+.gallery {
+  width: 100%;
+  background-color: get-bgColor('accent-pale');
+  background-image: linear-gradient(
+    to bottom,
+    get-bgColor('accent-pale') 0px 48px,
+    get-bgColor('main') 48px
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: center;
+}
