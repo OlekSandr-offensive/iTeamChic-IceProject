@@ -1,37 +1,53 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
 .contacts {
   background-color: get-bgColor('accent-pale');
 }
 
 .schedule-works {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
-    margin: -15px;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
 
 .works-item {
   height: auto;
-  text-align: inherit;
   background-color: get-bgColor('main');
   border-radius: 24px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   padding: 43px 21px 43px 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+
   @media screen and (max-width: $max-mobile) {
+    margin-right: 10px;
+    margin-left: 10px;
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-
   @media screen and (min-width: $tablet) {
-    flex-basis: calc((100% - 2 * 20px) / 3);
-    margin: 10px;
     padding: 50px 32px 50px 31px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   @media screen and (min-width: $desktop) {
-    flex-basis: calc((100% - 2 * 30px) / 3);
     padding: 51px 44px 62px 43px;
-    margin: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -41,6 +57,16 @@
   border-bottom-color: #ececec;
   padding-bottom: 25px;
   margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 .cafe-rubric {
@@ -49,23 +75,11 @@
   background: get-elementColor('card-secondary');
   border-radius: 4px;
   margin-bottom: 25px;
-}
-
-.cafe-rubric-green {
-  width: 130px;
-  text-align: center;
-  background: get-elementColor('card-tertiary');
-  border-radius: 4px;
-  margin-bottom: 25px;
-}
-
-.rubric-text {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-size: getFont-size__mob('text');
-  line-height: 186%;
-  letter-spacing: 0.04em;
+  line-height: 1.83;
   color: get-textColor('main-light');
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
@@ -75,14 +89,34 @@
   }
 }
 
+.cafe-rubric-green {
+  width: 130px;
+  text-align: center;
+  background: get-elementColor('card-tertiary');
+  border-radius: 4px;
+  margin-bottom: 25px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: getFont-size__mob('text');
+  line-height: 1.83;
+  color: get-textColor('main-light');
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+    line-height: 1.87;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__tab('text-categories');
+  }
+}
 .cafe-town {
   margin-bottom: 10px;
   font-family: 'DM Sans';
-  line-height: 186%;
-  letter-spacing: 0.04em;
+  line-height: 1.83;
   font-size: getFont-size__mob('text');
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
+    line-height: 1.86;
   }
   @media screen and (min-width: $desktop) {
     font-size: getFont-size__desk('text-more');
@@ -94,29 +128,15 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
+  line-height: 1.5;
   color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
+    line-height: 1.64;
   }
   @media screen and (min-width: $desktop) {
     font-size: getFont-size__desk('text-more');
-  }
-}
-
-.cafe-link {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: getFont-size__mob('text');
-  line-height: 150%;
-  color: get-textColor('additional');
-  @media screen and (min-width: $tablet) {
-    font-size: getFont-size__tab('text-review');
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: getFont-size__desk('text-more');
+    line-height: 1.81;
   }
 }
 
@@ -127,74 +147,87 @@
   font-family: 'DM Sans';
   font-weight: 500;
   font-size: 12px;
-  line-height: 186%;
+  line-height: 1.83;
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
+    line-height: 1.86;
   }
   @media screen and (min-width: $desktop) {
     font-size: getFont-size__desk('text-more');
+    line-height: 1.88;
   }
 }
-
 .cafe-time {
-  color: get-textColor('accent-pale');
+  color: #ffa5ba;
 }
-
-.button-location {
-
-  @extend %btn-7;
-  margin-bottom: 10px;
-  width: 161px;
-  height: 44px;
-
+.cafe-link {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: getFont-size__mob('text');
+  line-height: 1.5;
+  color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
-    width: 191.45px;
-    margin-bottom: 0;
-    margin-right: 15px;
-
+    font-size: getFont-size__tab('text-review');
+    line-height: 1.85;
   }
   @media screen and (min-width: $desktop) {
-    width: 198px;
+    font-size: getFont-size__desk('text-more');
+    line-height: 1.81;
   }
 }
 
-.button-franchise {
-
-  @extend %btn-6;
-  width: 161px;
-  height: 44px;
-  @media screen and (min-width: $tablet) {
-    width: 174.05px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 180px;
-
-  }
-  @media screen and (min-width: $desktop) {
-    width: 180px;
-  }
-}
 
 .schedule-button {
   margin-top: 54px;
   padding-bottom: 113px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  @media screen and (max-width: $max-mobile) {
-    display: flex;
-    flex-direction: column;
-  }
+
   @media screen and (min-width: $tablet) {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     margin-top: 81px;
     padding-bottom: 165px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 86px;
+  }
+}
+.button-location {
+  @extend %btn-7;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 14.5px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+  }
+  &:hover .about__btn-icon-loc,
+  &:focus .about__btn-icon-loc {
+    stroke: get-elementColor('button-secondary');
+  }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
+.about__btn-icon-loc {
+  margin-left: 13.62px;
+  stroke: get-elementColor('button-primary');
+}
+
+.button-franchise {
+  @extend %btn-6;
+  &:hover .about__btn-icon-fr,
+  &:focus .about__btn-icon-fr {
+    stroke: get-elementColor('button-primary');
+  }
+}
+
+.about__btn-icon-fr {
+  margin-left: 13.62px;
+  stroke: get-elementColor('button-secondary');
 }
