@@ -2,14 +2,14 @@
   background-color: get-bgColor('accent-pale');
 }
 
-.schedule-hookup {
+.schedule-works {
   @media screen and (min-width: 768px) {
     display: flex;
     margin: -15px;
   }
 }
 
-.hookup-item {
+.works-item {
   height: auto;
   text-align: inherit;
   background-color: get-bgColor('main');
@@ -45,9 +45,7 @@
 
 .cafe-rubric {
   width: 80px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: get-elementColor('card-secondary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -55,9 +53,7 @@
 
 .cafe-rubric-green {
   width: 130px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: get-elementColor('card-tertiary');
   border-radius: 4px;
   margin-bottom: 25px;
@@ -98,7 +94,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 150%;
   letter-spacing: 0.04em;
   color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
@@ -114,7 +110,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: getFont-size__mob('text');
-  line-height: 18px;
+  line-height: 150%;
   color: get-textColor('additional');
   @media screen and (min-width: $tablet) {
     font-size: getFont-size__tab('text-review');
@@ -141,16 +137,21 @@
 }
 
 .cafe-time {
-  color: get-textColor('accent-bright');
+  color: get-textColor('accent-pale');
 }
 
 .button-location {
-  width: 161px;
+
   @extend %btn-7;
+  margin-bottom: 10px;
+  width: 161px;
+  height: 44px;
+
   @media screen and (min-width: $tablet) {
     width: 191.45px;
+    margin-bottom: 0;
     margin-right: 15px;
-    margin-top: 0;
+
   }
   @media screen and (min-width: $desktop) {
     width: 198px;
@@ -158,12 +159,16 @@
 }
 
 .button-franchise {
-  width: 161px;
-  margin-top: 10px;
+
   @extend %btn-6;
+  width: 161px;
+  height: 44px;
   @media screen and (min-width: $tablet) {
     width: 174.05px;
-    margin-top: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 180px;
+
   }
   @media screen and (min-width: $desktop) {
     width: 180px;
