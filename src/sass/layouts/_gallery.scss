@@ -1,0 +1,35 @@
+.gallery {
+  background-color: get-bgColor('accent-pale');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 100%;
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+      to bottom,
+      get-bgColor('accent-pale') 0 39.3%,
+      get-bgColor('main') 39.3%
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      get-bgColor('accent-pale') 0 40.1%,
+      get-bgColor('main') 40.1%
+    );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+      to bottom,
+      get-bgColor('accent-pale') 0 39.77%,
+      get-bgColor('main') 39.77%
+    );
+  }
+}
+
+.gallery__wrapper {
+  display: flex;
+  justify-content: center;
+}
