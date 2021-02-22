@@ -24,6 +24,13 @@ header {
 
 .logo__img {
   margin-right: 24px;
+  transition-property: transform;
+  transition-duration: $animation-time;
+  transition-timing-function: $animation-timing-function;
+}
+
+.logo:hover .logo__img {
+  transform: rotate(90deg);
 }
 
 .main-nav {
@@ -169,4 +176,21 @@ header {
 
 .site-nav__link--mobile {
   font-size: get-font-size__tab('nav');
+}
+
+site-nav__list--mobile {
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  top: 123px;
+  left: 0;
+  height: 210px;
+  width: 250px;
+  background-image: repeating-linear-gradient(
+    to top,
+    #e18298 0px 1px,
+    transparent 1px 42px
+  );
 }

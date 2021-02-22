@@ -14,12 +14,13 @@
   height: 44px;
 
   border-radius: 22px;
+  stroke: get-elementColor('button-secondary');
 
   font-weight: 700;
   font-size: get-font-size__desk('nav');
   line-height: 1.31;
 
-  transition-property: color background-color;
+  transition-property: stroke color background-color;
   transition-duration: $animation-time;
   transition-timing-function: $animation-timing-function;
 }
@@ -103,7 +104,7 @@
 %btn-6:focus {
   background-color: get-elementColor('button-secondary');
   color: get-elementColor('button-primary');
-  fill: get-elementColor('button-primary');
+  stroke: get-elementColor('button-primary');
 }
 
 %btn-3:hover,
@@ -112,4 +113,12 @@
 %btn-7:focus {
   background-color: get-elementColor('button-primary');
   color: get-elementColor('button-secondary');
+}
+
+.btn-icon {
+  margin-left: 12px;
+}
+
+%btn-1:hover .btn-icon {
+  margin-left: 22px;
 }

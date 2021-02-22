@@ -1,19 +1,37 @@
 <div class="header__container container">
   <nav class="main-nav">
-    <a class="logo" href="./index.html"
-      ><img
-        class="logo__img"
-        src="../images/logo/logo 1.png"
-        alt="Логотип"
-      />Icecream</a
+    <a class="logo" href="./index.html">
+      <picture>
+        <source
+          srcset=" ../images/logo/logo1.png 1x, ../images/logo/logo1@2x.png 2x
+        ../images/logo/logo1@3x.png 3x"
+        />
+        <img
+          class="logo__img"
+          src="../images/logo/logo1.png"
+          alt="Логотип"
+        /> </picture
+      >Icecream</a
     >
 
     <ul class="site-nav">
-      <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Home</a></li>
-      <li class="site-nav__item"><a class="site-nav__link" href=>About us</a></li>
-      <li class="site-nav__item"><a class="site-nav__link" href="">How it’s made?</a></li>
-      <li class="site-nav__item"><a class="site-nav__link" href="">Our products</a></li>
-      <li class="site-nav__item"><a class="site-nav__link" href="">Contact</a></li>
+      <li class="site-nav__item">
+        <a class="site-nav__link site-nav__link--current" href="./index.html"
+          >Home</a
+        >
+      </li>
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="#advantages">About us</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="#about">How it’s made?</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="#products">Our products</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="#contacts">Contact</a>
+      </li>
     </ul>
     <div class="header__buttons">
       <button
@@ -47,25 +65,44 @@
         </svg>
       </button>
     </div>
-    <div class="site-nav--mobile" data-menu>
 
+    <div class="site-nav--mobile" data-menu>
       <button class="header__btn--mobile" type="button" data-modal-open-mob>
         Buy now
         <svg class="btn-icon" width="6" height="10">
           <use href="../images/svg/symbol-defs.svg#icon-further"></use>
         </svg>
       </button>
-
+      <div class="gradient"></div>
       <ul class="site-nav__list--mobile">
-      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile site-nav__link--current" href="./index.html">Home</a></li>
-      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href=>About us</a></li>
-      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">How it’s made?</a></li>
-      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">Our products</a></li>
-      <li class="site-nav__item--mobile"><a class="site-nav__link site-nav__link--mobile" href="">Contact</a></li>
+        <li class="site-nav__item--mobile">
+          <a
+            class="site-nav__link site-nav__link--mobile site-nav__link--current"
+            href="./index.html"
+            >Home</a
+          >
+        </li>
+        <li class="site-nav__item--mobile">
+          <a class="site-nav__link site-nav__link--mobile" href="#advantages"
+            >About us</a
+          >
+        </li>
+        <li class="site-nav__item--mobile">
+          <a class="site-nav__link site-nav__link--mobile" href="#about"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="site-nav__item--mobile">
+          <a class="site-nav__link site-nav__link--mobile" href="#products"
+            >Our products</a
+          >
+        </li>
+        <li class="site-nav__item--mobile">
+          <a class="site-nav__link site-nav__link--mobile" href="#contacts"
+            >Contact</a
+          >
+        </li>
       </ul>
     </div>
   </nav>
 </div>
-
-
-
