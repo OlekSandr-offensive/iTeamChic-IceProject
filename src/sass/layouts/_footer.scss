@@ -1,5 +1,12 @@
-.footer {
+footer {
   background-color: get-bgColor('accent-pale');
+  padding-bottom: 25px;
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 18px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 10px;
+  }
 }
 
 .footer__border {
@@ -15,13 +22,11 @@
   }
 }
 .footer-slohan {
-
   @media screen and (max-width: 479px) {
     width: 234px;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     width: 340px;
-
   }
 }
 .footer__slohan-tittle {
@@ -48,7 +53,6 @@
 }
 
 .footer__saturated {
-
   font-family: 'Titan One';
   font-size: 34px;
   line-height: 1.15;
@@ -66,7 +70,6 @@
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
-
   }
 }
 .footer__contacts-container {
@@ -163,7 +166,6 @@
 }
 .footer-titre {
   padding-top: 22px;
-  padding-bottom: 25px;
   text-align: center;
   font-family: 'DM Sans';
   font-style: normal;
@@ -178,11 +180,8 @@
   }
   @media screen and (min-width: $tablet) {
     padding-top: 29px;
-    padding-bottom: 18px;
   }
   @media screen and (min-width: $desktop) {
     padding-top: 9px;
-    padding-bottom: 10px;
   }
 }
-
