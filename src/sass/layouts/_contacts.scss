@@ -6,6 +6,7 @@
   clip: rect(0 0 0 0);
 }
 .contacts {
+  padding-bottom: 113px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -17,6 +18,7 @@
   );
 
   @media screen and (min-width: $tablet) {
+    padding-bottom: 165px;
     background-image: linear-gradient(
       to bottom,
       get-bgColor('main') 9.35%,
@@ -229,7 +231,6 @@
 
 .schedule-button {
   margin-top: 54px;
-  padding-bottom: 113px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,7 +239,6 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 81px;
-    padding-bottom: 165px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -279,4 +279,119 @@
 .about__btn-icon-fr {
   margin-left: 13.62px;
   stroke: get-elementColor('button-secondary');
+}
+///////////////////////////// Modal window
+.backdrop__ourlocations {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(88%, 47%, 57%, 0.5);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop__ourlocations.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop__ourlocations.is-hidden {
+  .modal__ourlocations {
+    opacity: 0;
+  }
+}
+.modal__ourlocations {
+  position: absolute;
+  padding: 25px 25px 25px 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 290px;
+  max-width: 640px;
+  width: 75%;
+  height: auto;
+  background-color: rgba(88%, 47%, 57%, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 576px) {
+    top: 55%;
+  }
+}
+.readmore__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  fill: get-elementColor('button-primary');
+
+  &:hover,
+  &:focus {
+    fill: get-elementColor('button-secondary');
+  }
+}
+.address__map {
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  display: flex;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.address__conent {
+  @media screen and (max-width: 479px) {
+    margin-left: 0;
+    text-align: center;
+  }
+  margin-left: 15px;
+}
+
+.address__town {
+  font-family: 'DM Sans';
+  line-height: 1.83;
+  font-size: 18px;
+  color: white;
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 1.86;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 22px;
+  }
+}
+.address__item {
+  list-style: none;
+}
+.address__day {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  color: rgba(255, 255, 255, 0.7);
+  @media screen and (min-width: $tablet) {
+    font-size: getFont-size__tab('text-review');
+    line-height: 1.86;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: getFont-size__desk('text-more');
+    line-height: 1.88;
+  }
+}
+.address__time {
+  color: rgba(255, 255, 255, 0.7);
 }
