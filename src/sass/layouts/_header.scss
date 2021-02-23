@@ -29,10 +29,6 @@ header {
   transition-timing-function: $animation-timing-function;
 }
 
-.logo:hover .logo__img {
-  transform: rotate(90deg);
-}
-
 .main-nav {
   width: 100%;
   display: flex;
