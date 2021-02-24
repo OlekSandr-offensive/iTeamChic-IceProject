@@ -50,6 +50,12 @@
 
 .products__list {
   color: get-textColor('main-light');
+  @media screen and (max-width: $max-mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -66,11 +72,21 @@
   border-radius: 24px;
   text-align: center;
   padding: 160px 40px 40px;
+
   @media screen and (max-width: $max-mobile) {
     &:not(:last-child) {
       margin-bottom: 130px;
     }
   }
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+    width: 360px;
+  }
+
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 2 * 20px) / 3);
     margin: 0 10px;
@@ -329,10 +345,124 @@
 
 .products__button-arrow {
   @extend %btn-4;
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+  transform: rotate(0deg);
+  transition: transform $animation-time $animation-timing-function;
+
+  &:hover {
+    transform: rotate(-90deg);
+  }
 
   &:hover .products__icon-arrow {
     fill: white;
   }
+}
+
+.products__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  padding: 40px 40px;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform $animation-time $animation-timing-function,
+    opacity $animation-time $animation-timing-function;
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    padding: 30px 20px 40px 60px;
+
+    .products__button-arrow:hover + & {
+      transform: translateY(-40%);
+      opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+    padding: 10px 60px 10px 90px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    transform: translateY(50%);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 210px;
+    padding: 40px 60px;
+  }
+}
+
+.products__button-arrow:hover + .products__overlay {
+  opacity: 1;
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    transform: translateY(-40%);
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+    left: 35px;
+    transform: translateY(-40%);
+  }
+
+  @media screen and (min-width: $tablet) {
+    transform: translateY(-50%);
+  }
+}
+
+.products__overlay--pink {
+  background-color: get-elementColor('card-primary');
+}
+
+.products__overlay--beige {
+  background-color: get-elementColor('card-secondary');
+}
+.products__overlay--green {
+  background-color: get-elementColor('card-tertiary');
+}
+
+.products__overlay-text {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+.products__overlay-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+}
+
+.products__overlay-icon--pink {
+  color: #e6325f;
+}
+
+.products__overlay-icon--beige {
+  color: #a0774e;
+}
+
+.products__overlay-icon--green {
+  color: #7cd803;
+}
+
+.products__overlay-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
