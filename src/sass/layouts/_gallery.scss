@@ -1,5 +1,5 @@
 .gallery {
-  background-color: get-bgColor('main');
+  background-color: get-bgColor('accent-pale');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 100%;
@@ -8,28 +8,26 @@
     background-image: linear-gradient(
       to bottom,
       get-bgColor('accent-pale') 0 39.3%,
-      transparent 100%
+      get-bgColor('main') 39.3%
     );
   }
-  // get-bgColor('main') 39.3%
+
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
       to bottom,
       get-bgColor('accent-pale') 0 40.1%,
-      transparent 100%
+      get-bgColor('main') 40.1%
     );
   }
-  // get-bgColor('main') 40.1%
 
   @media screen and (min-width: 1280px) {
     background-image: linear-gradient(
       to bottom,
       get-bgColor('accent-pale') 0 39.77%,
-      transparent 100%
+      get-bgColor('main') 39.77%
     );
   }
 }
-// get-bgColor('main') 39.77%
 
 .gallery__title-hidden {
   @include title-hidden;
@@ -39,14 +37,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 122px;
+  height: 100%;
 
-  // @media screen and (max-width: 479px) {
-  //   width: 300px;
-  // }
-
-  @media screen and (min-width: 480px) {
-    height: 176px;
+  @media screen and (max-width: 479px) {
+    width: 300px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -60,8 +54,7 @@
 
 .gallery__pictures {
   display: grid;
-  gap: 4px;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 5px;
   transform: scale(1);
   z-index: 0;
   cursor: pointer;
@@ -72,13 +65,16 @@
     z-index: 1;
   }
 
+  @media screen and (max-width: 479px) {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  }
+
   @media screen and (min-width: 480px) {
-    gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   }
 
   @media screen and (min-width: 768px) {
-    gap: 7px;
+    gap: 6px;
     grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
   }
 
@@ -101,6 +97,11 @@
 .gallery__picture--big {
   grid-column: span 2;
   grid-row: span 2;
+
+  @media screen and (max-width: 479px) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 .gallery__picture img {
