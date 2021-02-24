@@ -2,9 +2,8 @@
   position: relative;
   margin: auto;
   padding: 40px;
-  width: 100%;
   max-width: 450px;
-  max-height: 609px;
+  // height: 100vw;
 
   background-color: #e17992;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -15,6 +14,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 450px;
+    max-height: 609px;
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -25,7 +26,7 @@
 
   @media screen and(min-width: $desktop) {
     max-width: 528px;
-    max-height: 581px;
+    max-height: 881px;
   }
 
   &__btn-close {
@@ -36,20 +37,17 @@
     height: 30px;
     cursor: pointer;
 
-    border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border: none;
     background-color: transparent;
-    align-items: center;
-
-    transition-property: border-color;
+    stroke: get-elementColor('button-secondary');
+    transition-property: stroke;
     transition-duration: $animation-time;
     transition-timing-function: $animation-timing-function;
   }
 
   &__btn-close:hover {
-    border-color: get-elementColor('button-primary');
-    color: get-elementColor('button-primary');
+    stroke: get-elementColor('button-primary');
   }
 }
 
@@ -68,6 +66,10 @@
   transition: opacity $animation-time $animation-timing-function;
 }
 
+.backdrop--menu {
+  height: 100vw;
+}
+
 .backdrop--hidden {
   opacity: 0;
   pointer-events: none;
@@ -78,28 +80,91 @@
   font-size: 30px;
   color: get-titleColor('accent-bright');
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.form__modal {
+.form__data {
+  color: get-textColor('main-light');
+  font-weight: 400;
+  font-size: get-font-size__desk('nav');
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button__submit {
+  @extend %btn-1;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  color: get-textColor('main-light');
-  font-weight: 700;
-  font-size: get-font-size__desk('nav');
-  line-height: 1.31;
 }
 
-.form__modal label {
-  margin-bottom: 22px;
+.form__label > span {
+  display: block;
+  margin-bottom: 4px;
 }
 
-.button__confirmation {
-  @extend %btn-1;
-  // width: 50%;
-  // transform: translate(50%);
+.form__data {
+  input,
+  textarea {
+    width: 100%;
+    max-width: 470px;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid get-titleColor('accent-pale');
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: get-titleColor('accent-bright');
+
+    transition-property: border-color;
+    transition-duration: $animation-time;
+    transition-timing-function: $animation-timing-function;
+  }
+
+  input:focus,
+  input:hover {
+    border-color: get-titleColor('accent-bright');
+  }
+
+  input:focus + .icon,
+  input:hover + .icon {
+    fill: get-titleColor('accent-bright');
+  }
+
+  textarea[name='user_comment'] {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+  }
+
+  input:valid {
+    outline: green;
+  }
+
+  input:invalid {
+    outline: red;
+  }
+}
+
+.form__input {
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    transform: translateY(50%);
+    fill: get-titleColor('accent-pale');
+
+    transition-property: fill;
+    transition-duration: $animation-time;
+    transition-timing-function: $animation-timing-function;
+  }
 }
 
 .scrollup {
