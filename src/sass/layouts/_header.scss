@@ -29,10 +29,6 @@ header {
   transition-timing-function: $animation-timing-function;
 }
 
-.logo:hover .logo__img {
-  transform: rotate(90deg);
-}
-
 .main-nav {
   width: 100%;
   display: flex;
@@ -79,7 +75,7 @@ header {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 4;
+  z-index: 11;
 
   cursor: pointer;
   stroke: get-elementColor('button-secondary');
@@ -97,6 +93,7 @@ header {
 
 .mobile-nav__btn.is-open {
   position: absolute;
+  margin: 0;
   top: 23px;
   right: 14px;
   stroke: get-elementColor('button-primary');
