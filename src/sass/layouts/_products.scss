@@ -356,7 +356,8 @@
     transform: rotate(-90deg);
   }
 
-  &:hover .products__icon-arrow {
+  &:hover .products__icon-arrow,
+  &:focus .products__icon-arrow {
     fill: white;
   }
 }
