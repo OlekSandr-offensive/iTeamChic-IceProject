@@ -329,10 +329,95 @@
 
 .products__button-arrow {
   @extend %btn-4;
+  position: relative;
+  z-index: 1;
   width: 40px;
   height: 40px;
+  
+  &:hover {    
+    transform: rotate(-90deg);
+  }
 
   &:hover .products__icon-arrow {
     fill: white;
   }
 }
+
+.products__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  padding: 40px 40px;
+  opacity: 0;  
+  transform: translateY(50%);
+
+  @media screen and (min-width: $tablet) {
+    width: 200px;
+    padding: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 210px;
+    padding: 40px 60px;
+  }
+
+  .products__button-arrow:hover+& { 
+    transform: translateY(-50%); 
+    opacity: 1;
+  }
+}
+
+.products__overlay--pink {
+  background-color: get-elementColor('card-primary');
+}
+
+.products__overlay--beige {
+  background-color: get-elementColor('card-secondary');
+}
+.products__overlay--green {
+  background-color: get-elementColor('card-tertiary');
+}
+
+
+.products__overlay-text {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.products__overlay-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 20px; 
+}
+
+.products__overlay-icon--pink {
+  color:  #e6325f;
+}
+
+.products__overlay-icon--beige {
+  color: #a0774e;
+}
+
+.products__overlay-icon--green {
+  color:  #7cd803;
+}
+
+
+.products__overlay-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+
+// chocolate, tiramisu, lime, kiwi, strawberry, vanilla, chery-mania, cappuccino, pistachio,
+//   wild berry, coconut, raspberries, passion fruit, vanilla, caramel.
