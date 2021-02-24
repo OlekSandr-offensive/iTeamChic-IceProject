@@ -99,7 +99,9 @@
     display: none;
   }
 }
-
+.hero__button_arrow:hover .btn-icon-arrow {
+  fill: white;
+}
 .hero_container_milk {
   display: flex;
 }
