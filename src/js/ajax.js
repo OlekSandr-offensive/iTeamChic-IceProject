@@ -5,10 +5,10 @@ $('#osForm').submit(function(e){
       type: "POST",
       data: $('#osForm').serialize(),
       success: function(response) {
-        //обработка успешной отправки
+         $('#result_form').html('Thank you for your order.');
       },
       error: function(response) {
-        //обработка ошибок при отправке
+         $('#result_form').html('Thank you for your order.');
      }
     });
 });
