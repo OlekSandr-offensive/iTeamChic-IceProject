@@ -2,7 +2,7 @@
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
-  const mobileBodyRef = document.querySelector("[data-overflow]");
+  const mobileBackRef = document.querySelector("[data-menu-backdrop]");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -12,6 +12,6 @@
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
     mobileMenuRef.classList.toggle("is-open");
-    mobileBodyRef.classList.toggle("is-open");
+    mobileBackRef.classList.toggle("backdrop--hidden");
   });
 })();

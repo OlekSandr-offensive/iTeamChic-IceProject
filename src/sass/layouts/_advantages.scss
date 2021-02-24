@@ -1,10 +1,5 @@
 .advantages {
   background-color: get-bgColor('accent-pale');
-}
-.advantages__title-hidden {
-  @include title-hidden;
-}
-.advantages__container {
   padding-bottom: 97px;
 
   @media screen and (min-width: 768px) {
@@ -14,6 +9,9 @@
   @media screen and (min-width: 1280px) {
     padding-bottom: 139px;
   }
+}
+.advantages__title-hidden {
+  @include title-hidden;
 }
 .advantages__list {
   display: flex;

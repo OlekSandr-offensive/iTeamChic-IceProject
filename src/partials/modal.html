@@ -1,42 +1,69 @@
 <div class="backdrop backdrop--hidden" data-modal>
-  <div class="modal__readmore">
-    <button class="readmore__close-button" type="button" data-modal-close>
-      <svg height="20" width="20">
-        <use href="../images/svg/symbol-defs.svg#icon-close-cross"></use>
+  <div class="modal" data-modal>
+    <button class="modal__btn-close" data-modal-close>
+      <svg width="16" height="16">
+        <use href="../images/svg/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
-    <div class="form__buy-now">
-      <h2 class="readmore__title">Buy now</h2>
-      <form action="../php/telegram.php" method="POST" class="form__modal">
-        <label for="user-name" class="input__container">
-          <span class="readmore__text1">Name</span>
-          <input class="readmore__text2" type="text" name="user-name" />
-          <svg class="input__icon" width="10" height="10">
-            <use href=""></use>
-          </svg>
-        </label>
-        <label for="phone-number" class="input__container">
-          <span class="input__label">Telephone number</span>
-          <input class="input__field" type="tel" name="user_phone" />
-          <svg class="input__icon" width="10" height="10">
-            <use href=""></use>
-          </svg>
-        </label>
-        <label for="comment" class="comment__container">
-          <span class="input__label">Leave a comment</span>
-          <textarea
-            class="input__field input__comment"
-            name="user_comment"
-            placeholder="Type the comment"
-          ></textarea>
-        </label>
-        <div class="confirmation">
-          <button class="button__confirmation" type="submit">
-            Place order
-          </button>
+
+    <form id="osForm" name="osForm" action="" method="">
+      <div id="result_form" class="form__data">
+        <div class="form">
+          <h2 class="form__title">1 click order</h2>
+
+          <div class="form__data">
+            <label class="form__label">
+              <span>Name</span>
+              <div class="form__input">
+                <input type="text" name="name" placeholder="Nick" required />
+                <svg class="icon" width="18" height="18">
+                  <use href="../images/svg/symbol-defs.svg#icon-person"></use>
+                </svg>
+              </div>
+            </label>
+            <label for="" class="form__label">
+              <span>Phone</span>
+              <div class="form__input">
+                <input
+                  type="tel"
+                  name="user_tel"
+                  pattern="^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$"
+                  required
+                  placeholder="+38(050)123-45-67"
+                />
+                <svg class="icon" width="18" height="18">
+                  <use href="../images/svg/symbol-defs.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="form__label">
+              <span>E-mail</span>
+              <div class="form__input">
+                <input
+                  type="user_email"
+                  name="email"
+                  placeholder="example@mail.com"
+                  pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                />
+                <svg class="icon" width="18" height="18">
+                  <use href="../images/svg/symbol-defs.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
+            <label for="" class="form__label">
+              <span>Сomment</span>
+              <textarea
+                name="user_comment"
+                cols="30"
+                rows="5"
+                placeholder="Enter text"
+              ></textarea>
+            </label>
+          </div>
+          <button class="button__submit" type="submit">Confirm</button>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 <!-- Кнопка прокрутки наверх -->
