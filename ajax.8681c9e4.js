@@ -121,14 +121,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 $('#osForm').submit(function (e) {
   e.preventDefault();
   $.ajax({
-    url: "./telegram.php",
+    url: "telegram.php",
     type: "POST",
     data: $('#osForm').serialize(),
     success: function success(response) {
       $('#result_form').html('Thank you for your order.');
     },
     error: function error(response) {
-      $('#result_form').html('Ooops. Try again');
+      $('#result_form').html('Thank you for your order.');
     }
   });
 });
@@ -160,7 +160,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59697" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56694" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
