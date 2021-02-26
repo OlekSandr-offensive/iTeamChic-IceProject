@@ -1,5 +1,4 @@
 <section id="contacts" class="contacts">
-<section class="contacts">
     <div class="container">
         <h1 class="visually-hidden">Information for people</h1>
         <ul class="schedule-works">
@@ -84,6 +83,62 @@
                     <use href="../images/svg/symbol-defs.svg#icon-further1"></use>
                 </svg>
             </button>
+        </div>
+    </div>
+
+    <!-- window contact-backdrop -->
+    <div class="contact-backdrop">
+        <div class="contacts-modal">
+            <button class="contact__modal-button" type="button">
+               <svg width="11" height="11">
+                   <use href="../images/svg/modal.svg#close-window"></use>
+               </svg>
+            </button>
+            <div class="contact__form-window">
+                <h1 class="contact__form-text">Leave your details, we'll call you back</h1>
+                <form class="contact__form" autocomplete="off">
+                    <div class="contact__form-box">
+                        <label class="contact__label">
+                            <span class="contact__form-line">Name</span>
+                            <input type="text" name="name" class="contact__input">
+                            <svg class="contact__form-svg" width="12" height="12">
+                                <use href="../images/svg/modal.svg#Vector"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="contact__form-box">
+                        <label class="contact__label">
+                            <span class="form-line">Phone</span>
+                            <input type="tel" name="phone_number" class="contact__input">
+                             <svg class="contact__form-svg" width="13" height="13">
+                                <use href="../images/svg/modal.svg#Vector-1"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="contact__form-box">
+                        <label class="contact__label">
+                            <span class="form-line">Mail</span>
+                             <input type="email" name="mail" class="contact__input">
+                            <svg class="contact__form-svg" width="18" height="18">
+                                <use href="../images/svg/modal.svg#Vector-2"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="contact__form-box">
+                        <label class="contact__label">
+                            <span class="form-line">Comment</span>
+                            <textarea class="contact__input textarea" name="comment" id="comment" placeholder="Enter the text"></textarea>
+                        </label>
+                    </div>
+                    <div class="contact__check-box">
+                        <input type="contact-checkbox" name="agree" id="agree" class="contact__check-input">
+                        <label class="contact-checkbox-label" for="agree"><span class="contact-label-span">I agree with the mailing list and accept&nbsp;</span>
+                            <a class="contact-checkbox-link" href="#">Terms of the contract</a>
+                        </label>
+                    </div>
+                    <button class="submit-franchise" type="submit">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>
