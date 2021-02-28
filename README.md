@@ -1,3 +1,5 @@
+https://dariianikolaieva.github.io/iTeamChic-IceProject/
+
 # parcel-project-template
 
 ## Developing
